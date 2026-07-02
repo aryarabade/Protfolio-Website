@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #06070a;
+  --color-surface: #0d0f14;
+  --color-surface-2: #13161d;
+  --color-border: #1f2330;
+  --color-primary: #6366f1;
+  --color-primary-light: #818cf8;
+  --color-accent: #22d3ee;
+  --color-text: #e8eaf0;
+  --color-muted: #8b92a5;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+.glass {
+  background: rgba(13, 15, 20, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow {
+  box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.35);
+}
+
+/* Animated gradient blob background, used behind hero/sections */
+.bg-aurora {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-aurora::before,
+.bg-aurora::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: float 14s ease-in-out infinite;
+}
+
+.bg-aurora::before {
+  background: var(--color-primary);
+  top: -10%;
+  left: -10%;
+}
+
+.bg-aurora::after {
+  background: var(--color-accent);
+  bottom: -10%;
+  right: -10%;
+  animation-delay: -7s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 60px) scale(1.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-aurora::before,
+  .bg-aurora::after {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
