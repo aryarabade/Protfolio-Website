@@ -4,8 +4,7 @@
 
 **A modern, animated, recruiter-ready portfolio built with React + Vite + Tailwind CSS + Framer Motion**
 
-[![GitHub](https://img.shields.io/badge/GitHub-aryarabade-22d3ee?style=for-the-badge&logo=github)](https://github.com/aryarabade)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Arya_Rabade-0077B5?style=for-the-badge&logo=linkedin)]
+
 
 </div>
 
