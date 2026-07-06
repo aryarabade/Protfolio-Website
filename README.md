@@ -4,7 +4,8 @@
 
 **A modern, animated, recruiter-ready portfolio built with React + Vite + Tailwind CSS + Framer Motion**
 
-
+### 🌐 Live Demo
+**🔗 https://protfolio-website-two-sepia.vercel.app/**
 
 </div>
 
@@ -33,13 +34,13 @@
 | Contact | Web3Forms |
 | Icons | React Icons |
 | Fonts | Space Grotesk · Inter · JetBrains Mono |
-| Deployment | Vercel / Netlify |
+| Deployment | Vercel |
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 src/
 ├── components/
 │   ├── Navbar.jsx        # Fixed nav with scroll progress + mobile menu
@@ -66,8 +67,10 @@ src/
 ## 🚀 Getting Started
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/aryarabade/portfolio.git
+
+# Navigate into the project
 cd portfolio
 
 # Install dependencies
@@ -76,43 +79,72 @@ npm install
 # Add environment variable
 echo "VITE_WEB3FORMS_KEY=your_key_here" > .env
 
-# Start dev server
+# Start development server
 npm run dev
 ```
 
-> Get your free Web3Forms key at [web3forms.com](https://web3forms.com) — just enter your email.
+> Get your free Web3Forms key at **https://web3forms.com** by signing up with your email.
 
 ---
 
 ## ✏️ Customizing Content
 
-All site content lives in one file:
+All portfolio content is managed from a single file:
 
-```js
+```javascript
 // src/data/portfolioData.js
-export const profile = { name: "Your Name", ... }
-export const projects = [ ... ]
-export const skills = { ... }
+
+export const profile = {
+  name: "Your Name",
+  ...
+}
+
+export const projects = [
+  ...
+]
+
+export const skills = {
+  ...
+}
 ```
 
-Edit that file — everything else updates automatically. No need to touch any component.
+Simply edit `portfolioData.js` to update your portfolio without modifying any React components.
+
+---
+
+## 🌐 Live Demo
+
+Visit the deployed portfolio here:
+
+**https://protfolio-website-two-sepia.vercel.app/**
 
 ---
 
 ## 📦 Build & Deploy
 
 ```bash
-npm run build        # outputs to /dist
+# Create production build
+npm run build
 ```
 
-Deploy the `/dist` folder to **Vercel**, **Netlify**, or **GitHub Pages** in one click.
+Deploy the generated `/dist` folder to **Vercel**, **Netlify**, or **GitHub Pages**.
 
-> Add `VITE_WEB3FORMS_KEY` as an environment variable in your hosting dashboard.
+> Don't forget to add `VITE_WEB3FORMS_KEY` as an environment variable in your hosting platform.
+
+---
+
+## 📬 Contact
+
+- **Email:** aryarabade2006@gmail.com
+- **Portfolio:** https://protfolio-website-two-sepia.vercel.app/
+- **GitHub:** https://github.com/aryarabade
 
 ---
 
 <div align="center">
 
-Designed & built by **Arya Rabade** · [aryarabade2006@gmail.com](mailto:aryarabade2006@gmail.com)
+### ⭐ If you like this project, consider giving it a star!
+
+Designed & Built with ❤️ by **Arya Rabade**
 
 </div>
